@@ -364,13 +364,67 @@ button.btn-primary:hover {
   font-size: 13px;
 }
 
-/* ── Responsive ────────────────────────────────────────── */
-@media (max-width: 600px) {
-  .page { padding: 24px 16px 48px; }
-  .weather-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .card { padding: 16px; }
-  .card .icon { font-size: 36px; }
-  .card .temp { font-size: 28px; }
-  .detail-card { flex-direction: column; gap: 12px; text-align: center; }
-  .detail-card .detail-temp { font-size: 42px; }
+
+@media (max-width: 768px) {
+  .page { padding: 32px 20px 56px; }
+
+  .weather-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+  }
+
+  .detail-card .icon       { font-size: 60px; }
+  .detail-card .detail-temp { font-size: 48px; }
+}
+
+
+@media (max-width: 480px) {
+  nav {
+    padding: 10px 14px;
+    gap: 2px;
+  }
+  nav a {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .page         { padding: 20px 14px 48px; }
+  .page-header  { margin-bottom: 20px; }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .toolbar .search-bar       { min-width: unset; margin: 0; }
+  .toolbar > button          { width: 100%; justify-content: center; }
+
+  .weather-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  .card           { padding: 14px; }
+  .card .icon     { font-size: 32px; margin-bottom: 8px; }
+  .card h2        { font-size: 16px; margin-bottom: 4px; }
+  .card .temp     { font-size: 24px; }
+  .card .desc     { font-size: 12px; margin-bottom: 10px; }
+
+  .detail-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .detail-card .icon        { font-size: 64px; }
+  .detail-card .detail-temp { font-size: 52px; letter-spacing: -2px; }
+  .detail-card .detail-city { font-size: 18px; }
+  .detail-card .detail-desc { font-size: 15px; }
+
+  .not-found h1 { font-size: 64px; letter-spacing: -2px; }
+
+  .about-content { margin-top: 16px; }
+  .about-content p { font-size: 15px; }
+}
+
+@media (max-width: 340px) {
+  .weather-grid { grid-template-columns: 1fr; }
+  .card .temp   { font-size: 28px; }
 }

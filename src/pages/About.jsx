@@ -11,8 +11,7 @@ function About() {
       </div>
       <div className="about-content">
         <p>Application météo utilisant l'API <strong>Open-Meteo</strong> — gratuite, sans clé d'API requise.</p>
-        <p>Données en temps réel pour Paris, Lyon et Brest : température actuelle et condition météo.</p>
-        <p>Construite avec React, React Router et des composants réutilisables.</p>
+
       </div>
     </div>
   );
